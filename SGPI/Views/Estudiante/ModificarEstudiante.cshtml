@@ -1,0 +1,110 @@
+﻿@model SGPI.Models.Usuario
+
+@{
+    ViewData["Title"] = "ModificarEstudiante";
+   
+    Layout = "_LayoutSGPI";
+}
+<center><h1>Modificar Estudiante</h1></center>
+
+<br />
+
+<!--Agrego el menu-->
+<form action="" class="form-inline justify-content-center">
+    <ul class="nav nav-pills" class="form">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Estudiante/ModificarEstudiante">Actualizar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Estudiante/PagosEstudiante">Pagos</a>
+        </li>
+    </ul>
+</form>
+<br />
+<br />
+<!--Creacion de columnas-->
+<form method="post">
+    <div class="row">
+        <div class="form-group col-sm-4">
+            <label>Tipo de Documento:</label>
+            <div>
+                @Html.DropDownList("IdDoc", new SelectList(ViewBag.documento, "IdDoc","TipoDocumento"), new{@class="form-control dropdown"})
+            </div>
+        </div>
+
+        <div class="form-group col-sm-4">
+            <label>Genero:</label>
+            <div class="form-group">
+                @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero, "IdGenero","Genero1"),new{@class="form-control dropdown"})
+            </div>
+        </div>
+
+        <div class="form-group col-sm-4">
+            <label>Programas:</label>
+            <div class="form-group">
+                @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "Programa1"), new {@class="form-control dropdown"})
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-4">
+            <label>Primer Nombre:</label>
+            <input asp-for="Nombre" type="text" class="form-control col-sm-10" placeholder="Primer Nombre" id="cu_nommbretxt">
+        </div>
+        <div class="form-group col-sm-4">
+            <label>Primer Apellido:</label>
+            <input asp-for="Apellido" type="text" class="form-control col-sm-10" placeholder="Primer Apellido" id="cu_apellidotxt">
+        </div>
+        <div class="form-group col-sm-4">
+            <label>Telefono:</label>
+            <input asp-for="Telefono" type="text" class="form-control col-sm-10" placeholder="Telefono" id="cu_Telefonotxt">
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-4">
+            <label>Documento de Identidad:</label>
+            <input asp-for="Documento" type="text" class="form-control col-sm-10" placeholder="Número Documento" id="cu_nrodoctxt">
+        </div>
+
+        <div class="form-group col-sm-4">
+            <label>Correo electrónico:</label>
+            <input asp-for="Email" type="text" class="form-control col-sm-10" placeholder="Correo electrónico" id="cu_emailtxt">
+        </div>
+
+        <div class="form-group col-sm-4">
+            <label>Contraseña:</label>
+            <input asp-for="Password" type="text" class="form-control col-sm-10" placeholder="Contraseña" id="cu_pswtxt">
+        </div>
+
+    </div>
+    <div class="row">
+    <div class="form-group col-sm-5">
+       
+    </div>
+    </div>
+
+    <div>
+        @if (ViewBag.mensaje != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @ViewBag.mensaje
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+
+    <br />
+
+    <center><a href="/Administrador/Login" id="recuperarPass">¿Cerrar Sesion?</a></center>
+</form>
+
+
+
+
+
+    

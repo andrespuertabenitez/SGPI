@@ -1,0 +1,42 @@
+﻿@model SGPI.Models.Usuario;
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutSGPI";
+
+}
+
+
+<form method="post" class="col-lg-6 offset-lg-3">
+   
+      <div class="from-group">
+        <tr></tr>
+        <center> <label for="Usuariotxt">Usuario</label></center>
+        <tr></tr>
+       <center><input asp-for="Documento" type="text" class="form-group" /> </center>
+       <tr></tr>
+       </div>
+      
+      <div class="form-group"
+      <tr></tr>
+        <center> <label for="Passwordtxt">Contraseña</label> </center>
+       <tr></tr>
+        <center><input asp-for="Password" type="password" class="form-group" /></center>
+      <tr></tr>
+       </div>
+                    
+        <center>  <button id="ingresarbtn" type="submit">Ingresar</button></center>
+        <tr></tr>
+        <center> <a href="/Administrador/OlvidoContraseña" id="recuperarPassword"> Recuperar contraseña </a> </center>
+ </form>
+
+
+   
+
+
+
+
+
+  
+
+

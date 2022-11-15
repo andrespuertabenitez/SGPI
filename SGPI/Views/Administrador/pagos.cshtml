@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Registro";
+    Layout = "_LayoutSGPI";
+}
+<CENTER>
+    <br />
+<h1>PAGOS ADMINISTRATIVOS</h1>
+    </CENTER>
+    <br />
+
+
+<br />
+<button id="pagosbtn" type="submit"> REGRESAR </button>
+<button id="pagosbtn" type="submit"> PAGOS </button>
+<br />
+<center> <h1> informacion de pago </h1> </center>
+
+   
+    <center>
+        <table border="5">
+            <tr>
+                <td>no </td>
+                <td> carrera </td>
+                <td> valor del pago  </td>
+                <td> valor con descuento electoral </td>
+                <td>fecha de pago</td>
+                <td>numero documeto</td>
+                <td>correo electronico</td>
+                <td>fecha corte de pago</td>
+                <td>total</td>
+            <tr>
+            <td> 446003 </td>
+            <td> TECNOLOGIA EN SISTEMAS </td>
+            <td> 1.589.000  </td>
+            <td> 1.200.000 </td>
+            <td> 27-10-2023</td>
+            <td> 1.000.446.003</td>
+            <td> CAMILOSOLANO117@GMAIL.COM</td>
+            <td> 27-10-2023</td>
+            <td> 1.250.000</td>
+            <td><boton> <A href="PAGAR">PAGAR</boton></td>
+
+
+            <tr>
+               
+
+
+        </table>
+ 
+</center>
+
+    <CENTER>
+<br><br/>
+    <label>correo</label>
+    <input type="text" id="correotxt" required />
+    <label>ROL</label>
+    <select name="ROL" id="ROL">
+        <option value="SELECT">SELECT</option>
+        <option value="Estudiante">Estudiante</option>
+        <option value="Docente">Docente</option>
+        <option value="Empleado">Empleado</option>
+
+    </select>
+     <label>carrera</label>
+    <select name="carrera" id="carrera">
+        <option value="SELECT">SELECT</option>
+        <option value="tecnico en sistemas">tecnico en sistemas</option>
+        <option value="tecnologia en sistemas">tecnologia en sistemas</option>
+        <option value="imgemieria en sistemas">ingenieria en sistemas</option>
+
+    </select>
+<button id="CERTIFICADObtn" type="submit"> CERTIFICADO ELECTORAL </button>
+    <br><br />
+    <button id="IMPRIMIRFACTURAbtn" type="submit"> IMPRIMIR FACTURA </button>
+<br><br/>
+
+</CENTER>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+

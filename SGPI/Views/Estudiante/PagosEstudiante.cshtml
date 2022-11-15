@@ -1,0 +1,93 @@
+﻿@model SGPI.Models.Pago
+@{
+    ViewData["Title"] = "PagosEstudiante";
+
+    Layout = "_LayoutSGPI";
+}
+<div class="container">
+<center><h1>Pagos Estudiante</h1></center>
+<br />
+<!--Agrego el menu-->
+<form action="" class="form-inline justify-content-center">
+    <ul class="nav nav-pills form ">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/Estudiante/ModificarEstudiante">Actualizar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Estudiante/PagosEstudiante">Pagos</a>
+        </li>
+    </ul>
+</form>
+<!--Aca va la tabla-->
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            
+            <th scope="col">No Pago</th>
+            <th scope="col">Valor Pago</th>
+            <th scope="col">Fecha de Pago</th>
+            <th scope="col">Factura</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <form method="post">
+                <th scope="row"></th>
+                <th scope="row"><input asp-for="Valor" type="text" class="form-control col" placeholder="1.000.000" id="usuariotxt" requiered /></th>
+                <th scope="row"><input asp-for="Fecha" type="Date" class="form-control col" placeholder="" id="usuariotxt" requiered /></th>
+                <th scope="row"><input asp-for="Estado" type="file" class="form-control col" placeholder="" id="usuariotxt" requiered /></th>
+
+                <th scope="row">
+                    <input type="submit"> 
+                    </th>
+              
+            </form>
+        </tr>
+        
+    </tbody>
+</table>
+<br />
+
+<form method="post">
+        <div class="form-group col-sm-6">
+            <label>Buscar Fecha de pago:</label>
+            <input asp-for="Fecha" type="text" class="form-control col-sm-10" placeholder="Usuario" id="pwd">
+        </div>
+<center><button type="submit" class="btn btn-outline-danger" id="ingresarbtn type" submit>Pagos</button></center>
+<br />
+
+        
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">No Pago</th>
+                        <th scope="col">Valor Pago</th>
+                        <th scope="col">Fecha de Pago</th>
+                        <th scope="col">Factura</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayFor(modelitem=>modelitem.IdPago)</td>
+                        <td>@Html.DisplayFor(modelitem=>modelitem.Valor)</td>
+                        <td>@Html.DisplayFor(modelitem=>modelitem.Fecha)</td>
+                        <td>@Html.DisplayFor(modelitem=>modelitem.Estado)</td>
+
+                    </tr>
+                </tbody>
+            </table>
+       
+
+</form>
+<!--Aca boton-->
+
+
+<center><a href="/Administrador/Login" id="recuperarPass">¿Cerrar Sesion?</a></center>
+
+            <div class="col">
+    </div>
+
+            </div>

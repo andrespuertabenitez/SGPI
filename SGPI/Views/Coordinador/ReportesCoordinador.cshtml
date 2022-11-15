@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "ReportesCoordinador";
+    //Aca selecciono para que aparezca el layout
+    Layout = "_LayoutSGPI";
+}
+<center><h1>Reportes Coordinador</h1></center>
+<!--Agrego el menu-->
+<form action="" class="form-inline justify-content-center">
+    <ul class="nav nav-pills" class="form">
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/Coordinador/BuscarCoordinador">Buscar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Coordinador/ProgramarCoordinador">Programar Asignacion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Coordinador/HomologacionCoordinador">Homologacion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Coordinador/EntrevistasCoordinador">Entrevistas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Coordinador/ReportesCoordinador">Reportes</a>
+        </li>
+    </ul>
+</form>
+<br />
+<!--Creacion de columnas-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <label>Tipo de Documento</label>
+            <br />
+            <select class="form-select col-sm-6" aria-label="Default select example">
+                <option selected></option>
+                <option value="1">Cedula de Ciudadania</option>
+                <option value="2">Cedula de Extranjeria</option>
+                <option value="3">Tarjeta de Identidad</option>
+                <option value="3">NIT</option>
+                <option value="3">Pasaporte</option>
+            </select>
+            </div>
+            <div class="col-6">
+                <label>Numero de Documento</label>
+                <input type="text" class="form-control col-sm-6" id="documentotxt" requiered />
+            </div>
+            </div>
+            </div>
+            <br />
+            <br />
+<!--Aca va la tabla-->
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Programa</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"><input type="text" class="form-control col" placeholder="Samuel" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="Cardona" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="Masculino" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="1000417065" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="Maestria en Gestion" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="Estudiante" id="usuariotxt" requiered /></th>
+            <th scope="row"><input type="text" class="form-control col" placeholder="samucardonaamaya@gmail.com" id="usuariotxt" requiered /></th>
+        </tr>
+    </tbody>
+</table>
+<br />
+<center><button type="button" class="btn btn-outline-danger" id="ingresarbtn type" submit>Generar Reporte</button></center>
+<center><a href="/Administrador/Login" id="recuperarPass">¿Cerrar Sesion?</a></center>
+
+

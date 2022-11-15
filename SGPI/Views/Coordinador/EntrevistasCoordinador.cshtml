@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "EntrevistasCoordinador";
+    //Aca selecciono para que aparezca el layout
+    Layout = "_LayoutSGPI";
+}
+<center><h1>Entrevistas Coordinador</h1></center>
+<br />
+<!--Agrego el menu-->
+<form action="" class="form-inline justify-content-center">
+    <ul class="nav nav-pills" class="form">
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/Coordinador/BuscarCoordinador">Buscar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Coordinador/ProgramarCoordinador">Programar Asignacion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Coordinador/HomologacionCoordinador">Homologacion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/Coordinador/EntrevistasCoordinador">Entrevistas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Coordinador/ReportesCoordinador">Reportes</a>
+        </li>
+    </ul>
+</form>
+<!--Aca buscar coordinador-->
+<div class="container-fluid">
+<label>Buscar Coordinador</label>
+<!--Aca barra de busqueda-->
+<div class="input-group mb-3">
+    <input type="text" placeholder="Ingrese el coordinador" class="form-control col-sm-4"aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-outline-danger" type="button" id="button-addon2">Buscar</button>
+</div>
+</div>
+<br />
+<!--Columnas-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <label>Nombre</label>
+            <input type="text" placeholder="Samuel" class="form-control col-sm-7" id="nombretxt" requiered />
+        </div>
+        <div class="col">
+            <label>Primer Apellido</label>
+            <input type="text" placeholder="Cardona" class="form-control col-sm-7" id="nombretxt" requiered />
+        </div>
+        <div class="col">
+            <label>Segundo Apellido</label>
+            <input type="text" placeholder="Amaya" class="form-control col-sm-7" id="nombretxt" requiered />
+        </div>
+        <div class="col">
+            <label>Programa</label>
+            <input type="text" placeholder="Tecninca" class="form-control col-sm-7" id="nombretxt" requiered />
+        </div>
+        <div class="col">
+            <label>Documento</label>
+            <input type="text" placeholder="1000417065" class="form-control col-sm-7" id="nombretxt" requiered />
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<!--Creo columnas para botones-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <center><button type="button" class="btn btn-outline-danger btn-lg" id="enviarbtn type" submit>Ingresar</button></center>
+        </div>
+        <div class="col">
+            <center><button type="button" class="btn btn-outline-danger btn-lg" id="cancelarbtn type" submit>Volver</button></center>
+        </div>
+    </div>
+</div>
+
+
+
